@@ -32,6 +32,6 @@
          AND KCU2.TABLE_SCHEMA NOT IN ('dto', 'sys')
 
          ~:[~*~;and (~{~a~^ or ~})~]
-         ~:[~*~;and (~{~a~^ and ~})~]
+         ~:[~*~;and not (~{~a~^ or ~})~]
 
 ORDER BY KCU1.CONSTRAINT_NAME, KCU1.ORDINAL_POSITION;
