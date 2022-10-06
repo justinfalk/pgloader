@@ -51,7 +51,7 @@
                           :schema-col "c.table_schema"
                           :table-col "c.table_name")
      :with excl-where := (filter-list-to-where-clause
-                          mssql excluding :not t
+                          mssql excluding :not nil
                           :schema-col "c.table_schema"
                           :table-col "c.table_name")
      :for (schema-name table-name name type default nullable identity
