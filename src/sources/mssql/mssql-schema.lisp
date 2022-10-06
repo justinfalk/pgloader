@@ -89,7 +89,7 @@
                           :schema-col "schema_name(schema_id)"
                           :table-col "o.name")
      :with excl-where := (filter-list-to-where-clause
-                          mssql excluding :not t
+                          mssql excluding :not nil
                           :schema-col "schema_name(schema_id)"
                           :table-col "o.name")
      :for (schema-name table-name index-name colname unique pkey filter)
@@ -127,7 +127,7 @@
                           :schema-col "kcu1.table_schema"
                           :table-col "kcu1.table_name")
      :with excl-where := (filter-list-to-where-clause
-                          mssql excluding :not t
+                          mssql excluding :not nil
                           :schema-col "kcu1.table_schema"
                           :table-col "kcu1.table_name")
      :for (fkey-name schema-name table-name col
