@@ -18,6 +18,7 @@
              and co.column_id = ic.column_id
 
    where schema_name(schema_id) not in ('dto', 'sys')
+         and i.is_hypothetical != 1
          ~:[~*~;and (~{~a~^ or ~})~]
          ~:[~*~;and not (~{~a~^ or ~})~]
 
