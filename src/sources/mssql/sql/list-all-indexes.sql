@@ -19,7 +19,7 @@
 
    where schema_name(schema_id) not in ('dto', 'sys')
          ~:[~*~;and (~{~a~^ or ~})~]
-         ~:[~*~;and (~{~a~^ and ~})~]
+         ~:[~*~;and not (~{~a~^ or ~})~]
 
 order by SchemaName,
          o.[name],
